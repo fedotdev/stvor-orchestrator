@@ -1,0 +1,83 @@
+{
+  "DEV_run1.json": {
+    "blocked": 0,
+    "unplanned": 0,
+    "blocked_ids": [],
+    "unplanned_ids": [],
+    "old_predicate_missing_required_research": 0,
+    "old_predicate_ids": []
+  },
+  "DEV_run2.json": {
+    "blocked": 0,
+    "unplanned": 0,
+    "blocked_ids": [],
+    "unplanned_ids": [],
+    "old_predicate_missing_required_research": 0,
+    "old_predicate_ids": []
+  },
+  "DEV_run3.json": {
+    "blocked": 0,
+    "unplanned": 0,
+    "blocked_ids": [],
+    "unplanned_ids": [],
+    "old_predicate_missing_required_research": 0,
+    "old_predicate_ids": []
+  },
+  "TEST_run1.json": {
+    "blocked": 3,
+    "unplanned": 1,
+    "blocked_ids": [
+      "x09@clarification_required",
+      "x11@clarification_required",
+      "x19@manual_orchestrator"
+    ],
+    "unplanned_ids": [
+      "x16@orchestrated_readonly"
+    ],
+    "old_predicate_missing_required_research": 4,
+    "old_predicate_ids": [
+      "x09",
+      "x11",
+      "x16",
+      "x19"
+    ]
+  },
+  "TEST_run2.json": {
+    "blocked": 3,
+    "unplanned": 1,
+    "blocked_ids": [
+      "x09@clarification_required",
+      "x11@clarification_required",
+      "x19@manual_orchestrator"
+    ],
+    "unplanned_ids": [
+      "x16@orchestrated_readonly"
+    ],
+    "old_predicate_missing_required_research": 4,
+    "old_predicate_ids": [
+      "x09",
+      "x11",
+      "x16",
+      "x19"
+    ]
+  },
+  "TEST_run3.json": {
+    "blocked": 3,
+    "unplanned": 1,
+    "blocked_ids": [
+      "x09@clarification_required",
+      "x11@clarification_required",
+      "x19@manual_orchestrator"
+    ],
+    "unplanned_ids": [
+      "x16@orchestrated_readonly"
+    ],
+    "old_predicate_missing_required_research": 4,
+    "old_predicate_ids": [
+      "x09",
+      "x11",
+      "x16",
+      "x19"
+    ]
+  }
+}

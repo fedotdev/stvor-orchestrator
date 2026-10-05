@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local env files. redact.py scrubs secrets at write time, but a .env must
+# never reach the index in the first place.
+.env
+.env.*
+
+# Router artifacts contain request text, even scrubbed. They are run output,
+# not source.
+.agent/

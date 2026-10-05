@@ -1,0 +1,32 @@
+# Pre-existing local exclusions: dependencies are installed, not vendored.
+node_modules
+package.json
+package-lock.json
+bun.lock
+
+# Large trees that are not part of this project.
+.opencode/
+mcp-servers/
+skills/
+.agent/
+
+# Backups of config and agent trees.
+agent.bak-*/
+*.bak
+*.bak-*
+
+# Session transcripts: personal working notes, not project source.
+session-*.md
+*.session.json
+
+# Python bytecode.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets must never reach the index. redact.py scrubs them at write time, but
+# that is a second line of defence, not the first.
+.env
+.env.*

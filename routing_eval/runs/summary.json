@@ -1,0 +1,938 @@
+{
+  "note": "observe mode; 3 live runs per set. r1=old policy, r2=research fixes, r3=safety floor",
+  "sets": {
+    "DEV": {
+      "cases": 42,
+      "route_accuracy_pct": {
+        "r2": {
+          "min": 85.7,
+          "max": 88.1,
+          "mean": 87.3
+        },
+        "r3": {
+          "min": 85.7,
+          "max": 85.7,
+          "mean": 85.7
+        }
+      },
+      "intent_accuracy_pct": {
+        "min": 85.7,
+        "max": 88.1,
+        "mean": 87.3
+      },
+      "scope_merged_pct": {
+        "min": 76.2,
+        "max": 76.2,
+        "mean": 76.2
+      },
+      "safety": {
+        "unsafe_undercheck": [
+          0,
+          0,
+          0
+        ],
+        "unsafe_write": [
+          0,
+          0,
+          0
+        ],
+        "silent_noop_write": [
+          0,
+          0,
+          0
+        ],
+        "missing_clarification": [
+          0,
+          0,
+          0
+        ],
+        "sensitive_access_undercheck": [
+          0,
+          0,
+          0
+        ]
+      },
+      "coverage_blocked_required_research": {
+        "r2": [
+          0,
+          0,
+          0
+        ],
+        "r3": [
+          0,
+          0,
+          0
+        ]
+      },
+      "orchestration_unplanned_required_research": {
+        "r2": [
+          0,
+          0,
+          0
+        ],
+        "r3": [
+          0,
+          0,
+          0
+        ]
+      },
+      "cost_overspend": [
+        3,
+        3,
+        3
+      ],
+      "route_flips": [
+        {
+          "id": "c24",
+          "sequence": [
+            "manual_orchestrator",
+            "clarification_required",
+            "manual_orchestrator"
+          ]
+        }
+      ],
+      "per_case": [
+        {
+          "id": "c01",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c02",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c03",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c04",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c05",
+          "expected_route": "fast_readonly",
+          "actual_route": "clarification_required",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c06",
+          "expected_route": "fast_readonly",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c07",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "researcher"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c08",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "researcher"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c09",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "scout",
+            "implementer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c10",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "scout",
+            "implementer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c11",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c12",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "scout",
+            "implementer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c13",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c14",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c15",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "scout",
+            "test_analyst",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c16",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "scout",
+            "implementer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c17",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c18",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c19",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c20",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c21",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c22",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c23",
+          "expected_route": "orchestrated_write",
+          "actual_route": "clarification_required",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c24",
+          "expected_route": "orchestrated_write",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c25",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "scout",
+            "test_analyst",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c26",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c27",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c28",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c29",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c30",
+          "expected_route": "fast_readonly",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c31",
+          "expected_route": "orchestrated_readonly",
+          "actual_route": "orchestrated_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "researcher"
+          ],
+          "external_comparison_hint": true,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c32",
+          "expected_route": "orchestrated_readonly",
+          "actual_route": "orchestrated_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c33",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c34",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c35",
+          "expected_route": "diagnostic_readonly",
+          "actual_route": "diagnostic_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": true
+        },
+        {
+          "id": "c36",
+          "expected_route": "orchestrated_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c37",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "researcher"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c38",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "test_analyst",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c39",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c40",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c41",
+          "expected_route": "orchestrated_readonly",
+          "actual_route": "orchestrated_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "researcher"
+          ],
+          "external_comparison_hint": true,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "c42",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        }
+      ]
+    },
+    "TEST": {
+      "cases": 26,
+      "route_accuracy_pct": {
+        "r2": {
+          "min": 73.1,
+          "max": 73.1,
+          "mean": 73.1
+        },
+        "r3": {
+          "min": 80.8,
+          "max": 80.8,
+          "mean": 80.8
+        }
+      },
+      "intent_accuracy_pct": {
+        "min": 57.7,
+        "max": 61.5,
+        "mean": 60.2
+      },
+      "scope_merged_pct": {
+        "min": 53.8,
+        "max": 53.8,
+        "mean": 53.8
+      },
+      "safety": {
+        "unsafe_undercheck": [
+          0,
+          0,
+          0
+        ],
+        "unsafe_write": [
+          0,
+          0,
+          0
+        ],
+        "silent_noop_write": [
+          0,
+          0,
+          0
+        ],
+        "missing_clarification": [
+          0,
+          0,
+          0
+        ],
+        "sensitive_access_undercheck": [
+          0,
+          0,
+          0
+        ]
+      },
+      "coverage_blocked_required_research": {
+        "r2": [
+          3,
+          3,
+          3
+        ],
+        "r3": [
+          3,
+          3,
+          3
+        ]
+      },
+      "orchestration_unplanned_required_research": {
+        "r2": [
+          0,
+          0,
+          0
+        ],
+        "r3": [
+          0,
+          0,
+          0
+        ]
+      },
+      "cost_overspend": [
+        3,
+        3,
+        3
+      ],
+      "route_flips": [],
+      "per_case": [
+        {
+          "id": "x01",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x02",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x03",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x04",
+          "expected_route": "fast_readonly",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x05",
+          "expected_route": "fast_readonly",
+          "actual_route": "diagnostic_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": true
+        },
+        {
+          "id": "x06",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "test_analyst",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x07",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x08",
+          "expected_route": "orchestrated_write",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x09",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x10",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "clarification_required",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x11",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x12",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x13",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x14",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x15",
+          "expected_route": "fast_readonly",
+          "actual_route": "fast_readonly",
+          "allows_write": false,
+          "workers": [
+            "researcher"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x16",
+          "expected_route": "orchestrated_readonly",
+          "actual_route": "orchestrated_readonly",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "researcher"
+          ],
+          "external_comparison_hint": true,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x17",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x18",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "test_analyst",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x19",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x20",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": true,
+          "workers": [
+            "implementer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x21",
+          "expected_route": "clarification_required",
+          "actual_route": "clarification_required",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x22",
+          "expected_route": "clarification_required",
+          "actual_route": "clarification_required",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x23",
+          "expected_route": "clarification_required",
+          "actual_route": "clarification_required",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x24",
+          "expected_route": "manual_orchestrator",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x25",
+          "expected_route": "fast_readonly",
+          "actual_route": "manual_orchestrator",
+          "allows_write": false,
+          "workers": [
+            "test_analyst"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        },
+        {
+          "id": "x26",
+          "expected_route": "orchestrated_write",
+          "actual_route": "orchestrated_write",
+          "allows_write": false,
+          "workers": [
+            "scout",
+            "test_analyst",
+            "implementer",
+            "deep_reviewer"
+          ],
+          "external_comparison_hint": false,
+          "diagnostic_readonly_hint": false
+        }
+      ]
+    }
+  },
+  "previous_runs": {
+    "r1": "routing_eval/runs_prev/ (old policy) + routing_eval/old_research_baseline.json",
+    "r2": "routing_eval/runs_r2/ (research fixes, before the safety floor)"
+  }
+}
