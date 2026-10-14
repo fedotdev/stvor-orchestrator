@@ -12,6 +12,7 @@ skills/
 
 # Backups of config and agent trees.
 agent.bak-*/
+references/
 *.bak
 *.bak-*
 
