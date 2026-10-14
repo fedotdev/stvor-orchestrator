@@ -146,8 +146,8 @@ class OtherAgentsUnchanged(unittest.TestCase):
             '    "git reset*": deny',
             '    "git checkout*": deny',
             '    "git clean*": deny',
-            '    "git rebase*": deny',
             '    "git stash*": deny',
+            '    "git rebase*": deny',
         ))
         self.assertEqual(block, expected)
 
