@@ -4,54 +4,23 @@ mode: subagent
 model: octava/gpt-5.6-luna
 permission:
   edit: allow
-  # No subagent spawning. Without this the default is allow, and implementer
-  # could call task(implementer) and create a second writer on the same tree.
   task: deny
+  webfetch: deny
+  websearch: deny
   bash:
-    "*": ask
+    "*": deny
     "git status*": allow
     "git diff*": allow
     "git log*": allow
     "git show*": allow
-    "git blame*": allow
-    "rg *": allow
-    "grep *": allow
-    "ls *": allow
-    "cat *": allow
-    "head *": allow
-    "tail *": allow
-    "wc *": allow
-    "pytest*": ask
-    "python -m pytest*": ask
-    "python -m unittest*": ask
-    "python -m compileall*": ask
-    "node --test*": ask
-    "npm test*": ask
-    "bun test*": ask
-    "go test*": ask
-    "go vet*": ask
-    "cargo test*": ask
-    "cargo check*": ask
-    "mvn -q test*": ask
-    "gradle test*": ask
-    "make test*": ask
-    "git add*": deny
+    "git add *": allow
     "git commit*": deny
     "git push*": deny
     "git reset*": deny
     "git checkout*": deny
-    "git restore*": deny
     "git clean*": deny
     "git stash*": deny
     "git rebase*": deny
-    "rm *": deny
-    "rmdir *": deny
-    "del *": deny
-    "curl *": deny
-    "wget *": deny
-    "ssh *": deny
-    "scp *": deny
-    "chmod *": deny
 ---
 
 Ты — implementer. Ты **единственный** агент в этой схеме, которому разрешено менять код.
